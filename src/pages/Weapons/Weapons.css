@@ -1,0 +1,230 @@
+.title {
+    position: absolute;
+    left: 41%;
+    z-index: 999;
+    font-size: 2.5rem;
+    color: white;
+    font-family: Orbitron;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    opacity: 0;
+    text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+    animation: fade-in 1s forwards;
+}
+
+.title:hover {
+  color: #ff6600;
+  cursor: pointer;
+  font-size: 2.6rem;
+  font-weight: 700;
+}
+
+.power {
+  position: absolute;
+  color: #2e2e2e;
+  left: 2%;
+  top: 11%;
+  font-family: 'Philosopher', sans-serif;
+/* font-family: 'Proza Libre', sans-serif; */
+  font-size: 3rem;
+  z-index: 999;
+}
+
+.power:hover {
+  .w {
+    color: #2e2e2e;
+    font-size: 3.4rem;
+  }
+  /* color: #ff1493; */
+  color: #ff6600;
+  cursor: pointer;
+  font-size: 3.2rem;
+}
+
+.w {
+  color: #ff6600;
+  font-size: 3.2rem;
+
+}
+
+.w:hover {
+  color: #2e2e2e;
+  font-size: 3.4rem;
+  
+}
+.subtitle {
+  position: absolute;
+  font-size: 2.3rem;
+  margin: 10px;
+  color: #0d263f;
+  top: 23%;
+  left: 5%;
+  text-transform: uppercase;
+  font-family: Roboto;
+  font-style: italic;
+  z-index: 999;
+  animation: fade-in-left 1s forwards;
+}
+
+.slider-container {
+    position: relative;
+    padding-top: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    z-index: 11;
+  }
+
+  
+  .slider-button {
+    appearance: none;
+    background: transparent;
+    border: none;
+    color: #ff6600;
+    font-size: 3rem;
+    width: 2rem;
+    height: 2rem;
+    transition: opacity 0.3s;
+    opacity: 0.7;
+    z-index: 5;
+    cursor: pointer;
+  }
+  
+  .slider-button:hover {
+    opacity: 1;
+  }
+  
+  .slider-button:focus {
+    outline: none;
+  }
+  
+  .slider {
+    position: relative;
+    width: 80vw;
+    max-width: 800px;
+    height: 80vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    background-size: cover;
+    background-position: center center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    will-change: transform, opacity;
+  }
+  
+.slide:hover {
+  box-shadow: 40px 40px 40px rgba(0, 0, 0);
+}
+
+  .slideBackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    /* opacity: 0.2; */
+    /* filter: blur(3px);  */
+    z-index: -1;
+  }
+  
+  .background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    filter: blur(5px); /* Adjust the blur amount as needed */
+    z-index: 1;
+    transition: opacity 2s ease; 
+  }
+
+  .slideContent {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 1rem;
+    transform: translateY(100%);
+    transition: transform 0.3s;
+  }
+  
+  .slide:hover .slideContent {
+    transform: translateY(0);
+  }
+  
+  .slideContentInner {
+    text-align: center;
+  }
+  
+  .slideTitle {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+  }
+  
+  .slideDescription {
+    font-size: 1rem;
+    color: #ccc;
+    line-height: 1.5;
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fade-in-left {
+    from {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+/* 
+.slider-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden; 
+  }
+  
+.slider-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    filter: blur(8px); 
+  }
+  
+  .background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }  */
+

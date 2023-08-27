@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Great+Vibes&family=ZCOOL+XiaoWei&display=swap");
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 5px 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, opacity 0.3s;
+  transform: translateY(0);
+  opacity: 1;
+  z-index: 1000;
+  font-family: Lato;
+}
+
+.header-wrapper {
+  flex: 1; 
+  padding-top: 0.7rem;
+  padding-left: 5rem;
+  display: flex;
+  /* align-items: center; */
+}
+
+nav.hide {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 18px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    margin-right: 3em;
+}
+
+/* header {
+  background-color: #000;
+  color: #fff;
+  font-family: Lato;
+  top: 0;
+} */
+
+/* header ul {
+  display: flex;
+  list-style-type: none;
+  padding: 20px;
+  font-size: 20px;
+  justify-content: space-around;
+} */
+
+header li {
+  margin-right: 30px;
+  transition: 0.5s;
+}
+
+header a:hover {
+  color: #39ff14;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+header a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.barIcon {
+  font-size: 25px;
+  background: none;
+  color: #fff;
+  display: none;
+  border: none;
+}
+
+@media screen and (max-width: 768px) {
+  .head .ad {
+    display: none;
+  }
+  header .icon {
+    display: none;
+  }
+  header .flex {
+    display: none;
+  }
+  .barIcon {
+    display: block;
+  }
+  header .navbar {
+    position: absolute;
+    display: block;
+    background-color: #c05f52;
+    left: 0;
+    top: 21%;
+    transition: 0.5s;
+    width: 100%;
+    height: 45vh;
+    z-index: 5;
+    padding: 50px;
+  }
+  header .navbar {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+  header ul li {
+    margin-bottom: 30px;
+  }
+}

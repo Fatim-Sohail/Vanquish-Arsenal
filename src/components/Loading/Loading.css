@@ -1,0 +1,10 @@
+.loading {
+    background-color: black;
+    height: 100vh;
+}
+
+.loading-image {
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+}

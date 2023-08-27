@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+
+.wrapper {
+  font-size: 5vmin;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  mix-blend-mode: screen;
+}
+
+.wrapper.invert span {
+  color: black;
+}
+
+.wrapper span {
+  --color: #39ff14;
+  /* --color: rgb(88, 8, 88); */
+  font-family: Impact, 'Anton', Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  /* display: inline-block; */
+  position: absolute;
+  color: var(--color);
+  letter-spacing: -.005em;
+}
+
+.wrapper span::before,
+.wrapper span::after {
+  content: attr(data-text);
+  display: block;
+  position: relative;
+  padding: 0 .1em;
+  z-index: 1;
+}
+
+.wrapper span::before {
+  position: absolute;
+  -webkit-text-stroke: .1em black;
+  z-index: 0;
+}
+
+.wrapper span:first-child {
+  transform: translate(-.255em, -.25em);
+}
+
+.wrapper span:last-child {
+  --color: #c0c0c0;
+  transform: translate(.255em, .25em);
+}
